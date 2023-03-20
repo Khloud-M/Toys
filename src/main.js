@@ -14,6 +14,10 @@ import HeadingSection from "@/components/ui/HeadingSection.vue";
 // bootsrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+// import Aos library
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+AOS.init();
 // import css file
 import "@/assets/styles/main.css";
 import "@/assets/styles/form.css";
