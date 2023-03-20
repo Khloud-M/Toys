@@ -5,6 +5,9 @@ import router from "./router";
 // import i18n from "./i18n";
 // Plugins
 import { registerPlugins } from '@/plugins'
+// bootsrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
 
 const app = createApp(App)
 
