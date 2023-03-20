@@ -1,5 +1,7 @@
 <template>
   <v-app>
+    <the-header />
+
     <v-main>
       <HelloWorld />
     </v-main>
@@ -7,5 +9,5 @@
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld.vue";
 </script>

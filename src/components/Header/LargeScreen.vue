@@ -45,7 +45,7 @@
           aria-controls="offcanvasRight"
         >
           <v-icon size="27" icon="mdi-shopping-outline"></v-icon>
-          <span class="overlay"> {{ cart.length }}</span>
+          <!-- <span class="overlay"> {{ cart.length }}</span> -->
         </button>
         <TheCart />
       </ul>
@@ -55,18 +55,23 @@
 </template>
 
 <script>
-import ChangeLang from "@/components/layout/Header/ChangeLang.vue";
-import CategeryCart from "@/components/Home/CategeryCart.vue";
-import TheCart from "@/components/Cart/TheCart.vue";
+// import ChangeLang from "@/components/layout/Header/ChangeLang.vue";
+// import CategeryCart from "@/components/Home/CategeryCart.vue";
+// import TheCart from "@/components/Cart/TheCart.vue";
 import SearchCategery from "./SearchCategery.vue";
-import { mapGetters } from "vuex";
+// import { mapGetters } from "vuex";
 export default {
-  components: { ChangeLang, CategeryCart, TheCart, SearchCategery },
-  computed: {
-    ...mapGetters({
-      cart: "products/cart",
-    }),
+  components: {
+    // ChangeLang,
+    //  CategeryCart,
+    // TheCart,
+    SearchCategery,
   },
+  // computed: {
+  //   ...mapGetters({
+  //     cart: "products/cart",
+  //   }),
+  // },
 };
 </script>
 
@@ -115,18 +120,18 @@ export default {
       color: var(--main-color);
     }
   }
-  .cart_overlay{
+  .cart_overlay {
     position: relative;
-    .overlay{
-       background-color: yellow;
-       position: absolute;
-       left: 8px;
-       bottom: -12px;
-       font-size: 13px;
-       width: 20px;
-       height: 20px;
-       border-radius: 50%;
-       text-align: center;
+    .overlay {
+      background-color: yellow;
+      position: absolute;
+      left: 8px;
+      bottom: -12px;
+      font-size: 13px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
     }
   }
 }
