@@ -2,38 +2,38 @@ import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
    routes: [
-  //   { path: "/", component: () => import("@/pages/HomePage.vue") },
-  //   { path: "/about", component: () => import("@/pages/nav/AboutSection.vue") },
-  //   {
-  //     path: "/Contact",
-  //     component: () => import("@/pages/nav/ContactSection.vue"),
-  //   },
-  //   { path: "/offer", component: () => import("@/pages/nav/OfferSection.vue") },
+    { path: "/", component: () => import("@/pages/HomePage.vue") },
+    { path: "/about", component: () => import("@/pages/nav/AboutSection.vue") },
+    {
+      path: "/Contact",
+      component: () => import("@/pages/nav/ContactSection.vue"),
+    },
+    { path: "/offer", component: () => import("@/pages/nav/OfferSection.vue") },
   //   // auth page
-  //   {
-  //     path: "/:auth",
-  //     component: () => import("@/pages/auth/BasicPage.vue"),
-  //     props: true,
-  //     children: [
-  //       { path: "", component: () => import("@/pages/auth/LoginPage.vue") },
-  //       {
-  //         path: "forgetPass",
-  //         component: () => import("@/pages/auth/ForgetPass.vue"),
-  //       },
-  //       {
-  //         path: "register",
-  //         component: () => import("@/pages/auth/RegisterPage.vue"),
-  //       },
-  //       {
-  //         path: "varifaction/:type",
-  //         component: () => import("@/pages/auth/VarficationCode.vue"),
-  //       },
-  //       {
-  //         path: "resetpass",
-  //         component: () => import("@/pages/auth/ResetpassPage.vue"),
-  //       },
-  //     ],
-  //   },
+    {
+      path: "/:auth",
+      component: () => import("@/pages/auth/BasicPage.vue"),
+      props: true,
+      children: [
+        { path: "", component: () => import("@/pages/auth/LoginPage.vue") },
+        {
+          path: "forgetPass",
+          component: () => import("@/pages/auth/ForgetPass.vue"),
+        },
+        {
+          path: "register",
+          component: () => import("@/pages/auth/RegisterPage.vue"),
+        },
+        {
+          path: "varifaction/:type",
+          component: () => import("@/pages/auth/VarficationCode.vue"),
+        },
+        {
+          path: "resetpass",
+          component: () => import("@/pages/auth/ResetpassPage.vue"),
+        },
+      ],
+    },
   //   // shopping Page
   //   {
   //     path: "/ShoppingCart",
