@@ -13,21 +13,74 @@
       </div>
       <!-- logo -->
       <large-screen class="large_sreen col-lg-10" />
-
+      <div class="mobile_Screen">
+        <button
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <div class="bars_icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements
+              you have chosen. Like, text, images, lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+              >
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- mobile Screen -->
     </div>
     <!-- container -->
   </section>
 </template>
 <script>
-
 import LargeScreen from "@/components/Header/LargeScreen.vue";
 // import TheCart from "@/components/Cart/TheCart.vue";
 export default {
-  components:
-  { LargeScreen,
+  components: {
+    LargeScreen,
     //  TheCart
-     },
+  },
 };
 </script>
 <style lang="scss" >
@@ -63,7 +116,7 @@ export default {
 
 // media screen
 @media (min-width: 1201px) {
-  .phone {
+  .mobile_Screen {
     display: none;
   }
 }
@@ -71,12 +124,8 @@ export default {
   .large_sreen {
     display: none;
   }
-  .phone {
+  .mobile_Screen {
     display: block;
-  }
-  .mobile_screan {
-    display: flex;
-    justify-content: flex-end;
     .bars_icon {
       display: flex;
       flex-direction: column;
@@ -88,38 +137,6 @@ export default {
         width: 25px;
         height: 1px;
         background-color: var(--main-color);
-      }
-    }
-    // end bars_icon
-    .SideBar_Mob {
-      background-color: rgb(0, 0, 0, 0.6);
-      position: fixed;
-      top: 0;
-      right: 0%;
-      width: 100%;
-      height: 100vh;
-      z-index: 9999999;
-      .container_mob {
-        background-color: white;
-        height: 100%;
-        width: 45%;
-        padding: 30px;
-        position: relative;
-        .header_mob {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          .v-icon {
-            transition: all 0.3 ease-in-out;
-            padding: 15px;
-            color: var(--main-color);
-            &:hover {
-              border: 1px solid var(--color-yellow);
-              border-radius: 8px;
-            }
-          }
-        }
       }
     }
   }

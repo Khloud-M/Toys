@@ -55,16 +55,16 @@
 </template>
 
 <script>
-// import ChangeLang from "@/components/layout/Header/ChangeLang.vue";
+import ChangeLang from "@/components/Header/ChangeLang.vue";
 // import CategeryCart from "@/components/Home/CategeryCart.vue";
-// import TheCart from "@/components/Cart/TheCart.vue";
+import TheCart from "@/components/Cart/TheCart.vue";
 import SearchCategery from "./SearchCategery.vue";
 // import { mapGetters } from "vuex";
 export default {
   components: {
-    // ChangeLang,
+    ChangeLang,
     //  CategeryCart,
-    // TheCart,
+    TheCart,
     SearchCategery,
   },
   // computed: {

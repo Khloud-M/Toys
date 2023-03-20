@@ -1,15 +1,7 @@
 <template>
   <v-container class="fill-height">
     <div class="phone">
-      <a
-        class="btn btn-primary"
-        data-bs-toggle="offcanvas"
-        href="#offcanvasExample"
-        role="button"
-        aria-controls="offcanvasExample"
-      >
-        Link with href
-      </a>
+    
       <button
         class="btn btn-primary"
         type="button"
