@@ -37,16 +37,7 @@
           {{ $t("buttons.signIn") }}</router-link
         >
         <v-icon size="27" icon="mdi-bell"></v-icon>
-        <button
-          class="cart_overlay"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasRight"
-          aria-controls="offcanvasRight"
-        >
-          <v-icon size="27" icon="mdi-shopping-outline"></v-icon>
-          <!-- <span class="overlay"> {{ cart.length }}</span> -->
-        </button>
+       
         <TheCart />
       </ul>
     </div>
