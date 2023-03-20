@@ -18,6 +18,16 @@ import "bootstrap";
 import "@/assets/styles/main.css";
 import "@/assets/styles/form.css";
 import "@/assets/styles/Item.css";
+// Vuetify
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+
+const vuetify = createVuetify({
+  components,
+  directives,
+});
 
 const app = createApp(App);
 app.component("the-header", TheHeader);
@@ -29,4 +39,6 @@ registerPlugins(app);
 app.use(router);
 app.use(store);
 app.use(i18n);
+app.use(vuetify);
+
 app.mount("#app");
