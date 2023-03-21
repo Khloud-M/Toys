@@ -45,9 +45,44 @@
           </div>
           <hr />
           <div class="offcanvas-body">
-            <div >
+            <div>
               <search-categery class="search_cat" />
             </div>
+            <div class="login_cart">
+              <router-link to="/:auth">
+                <v-icon icon="mdi-account"> </v-icon>
+                {{ $t("buttons.signIn") }}</router-link
+              >
+              <router-link to="/ShoppingCart">
+                <v-icon size="27" icon="mdi-shopping-outline"></v-icon>
+              </router-link>
+            </div>
+            <ul>
+              <li>
+                <router-link to="/">
+                  <h3>Main List</h3>
+                </router-link>
+              </li>
+              <li>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </li>
+              <li>
+                <router-link to="/offer"> {{ $t("navs.offer") }}</router-link>
+              </li>
+              <li>
+                <router-link to="/about"> {{ $t("navs.aboutUs") }}</router-link>
+              </li>
+              <li>
+                <router-link to="/Contact">
+                  {{ $t("navs.contactUs") }}</router-link
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -59,6 +94,7 @@
 <script>
 import LargeScreen from "@/components/Header/LargeScreen.vue";
 import SearchCategery from "./SearchCategery.vue";
+
 export default {
   components: {
     LargeScreen,
@@ -122,14 +158,27 @@ export default {
         background-color: var(--main-color);
       }
     }
-    .btn-close:focus {
-      box-shadow: 0 0 0 0rem;
-      border: 2px solid var(--color-yellow);
+    .btn-close {
+      border: 2px solid var(--color-yellow) !important;
       padding: 10px;
       border-radius: 5px;
     }
-    .search_cat {
-      width: 100% !important;
+    .btn-close:focus {
+      box-shadow: 0 0 0 0rem;
+    }
+    .offcanvas-body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      .search_cat {
+        width: 100% !important;
+      }
+      .login_cart {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: center;
+      }
     }
   }
 }

@@ -8,7 +8,7 @@
       aria-controls="offcanvasRight"
     >
       <v-icon size="27" icon="mdi-shopping-outline"></v-icon>
-      <!-- <span class="overlay"> {{ cart.length }}</span> -->
+      <span class="overlay"> {{ cart.length }}</span>
     </button>
     <div
       class="offcanvas offcanvas-end"

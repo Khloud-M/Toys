@@ -34,18 +34,18 @@ const router = createRouter({
         },
       ],
     },
-  //   // shopping Page
-  //   {
-  //     path: "/ShoppingCart",
-  //     component: () => import("@/pages/ShoppingPage.vue"),
-  //   },
-  //   { path: "/CheckOut", component: () => import("@/pages/CheckOut.vue") },
-  //   // categery
-  //   {
-  //     path: "/category/:id",
-  //     component: () => import("@/pages/Categery/ItemCategery.vue"),
-  //     props: true,
-  //   },
+    // shopping Page
+    {
+      path: "/ShoppingCart",
+      component: () => import("@/pages/ShoppingPage.vue"),
+    },
+    { path: "/CheckOut", component: () => import("@/pages/CheckOut.vue") },
+    // categery
+    {
+      path: "/category/:id",
+      component: () => import("@/pages/Categery/ItemCategery.vue"),
+      props: true,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     console.log(savedPosition);
