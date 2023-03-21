@@ -15,12 +15,7 @@
         <tr>
           <td colspan="6">
             <div class="empty_image">
-              <img
-                src="@/assets/images/empty-cart.svg"
-                alt="emptycart"
-                width="300"
-                height="300"
-              />
+              <img src="@/assets/images/empty-cart.svg" alt="emptycart" />
               <h5>
                 {{ $t("placeholder.emptyCart") }}
               </h5>
@@ -29,7 +24,7 @@
         </tr>
       </tbody>
     </table>
-    <div class="summary">
+    <!-- <div class="summary">
       <h5>{{ $t("placeholder.remember6") }}</h5>
       <div class="d-flex justify-content-between">
         <h6>{{ $t("placeholder.subtotal") }}</h6>
@@ -43,7 +38,7 @@
           {{ $t("placeholder.Completepay") }}
         </base-button>
       </router-link>
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -52,11 +47,37 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 1000px) {
+  // .emptycart {
+  //   background-color: red;
+  // }
+  table {
+    width: 100% !important;
+  }
+  .table > :not(caption) > * > * {
+  padding: 2px !important;
+  font-size: 12px;
+}
+// th{
+//   font-size: 15px !important;
+// }
+  .empty_image {
+    h5{
+      font-size: 16px;
+    }
+    width: 150px;
+    height: 200px;
+    margin: auto;
+    img {
+      width: 100%;
+    }
+  }
+}
 th {
   text-transform: capitalize;
 }
 .table > :not(caption) > * > * {
-  padding: 20px !important;
+  padding: 20px ;
 }
 .empty_image {
   h5 {

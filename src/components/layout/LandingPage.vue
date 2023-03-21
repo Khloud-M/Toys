@@ -28,12 +28,27 @@ export default {
   height: 11vh;
   color: var(--second-color);
   margin-bottom: var(--margin);
+  @media (max-width: 768px) {
+    & {
+      height: 22vh;
+    }
+  }
 }
 .container {
   justify-content: space-between;
   height: 100%;
   padding-top: 30px;
   text-transform: capitalize;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+    }
+  
+  }
 
   h3 {
     font-weight: 400;
