@@ -40,6 +40,8 @@ import TheCart from "@/components/Cart/TheCart.vue";
 import SearchCategery from "./SearchCategery.vue";
 import { mapGetters } from "vuex";
 export default {
+  props: ["id"],
+
   components: {
     ChangeLang,
     //  CategeryCart,

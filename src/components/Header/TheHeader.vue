@@ -54,7 +54,7 @@
                 {{ $t("buttons.signIn") }}</router-link
               >
               <router-link to="/ShoppingCart">
-                <v-icon size="27" icon="mdi-shopping-outline"></v-icon>
+                <v-icon size="27" icon="mdi-shopping-outline" data-bs-dismiss="offcanvas"></v-icon>
               </router-link>
             </div>
             <ul>
