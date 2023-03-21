@@ -11,7 +11,7 @@
 .heading {
   hr {
     border-color: var(--border-color) !important;
-    opacity: 1 !important;
+    // opacity: 1 !important;
   }
   h2 {
     color: var(--main-color);
