@@ -3,13 +3,13 @@
     <landing-page />
     <div class="container product_item d-flex">
       <div class="container_item col-lg-3" v-for="item in MoreSaling">
-     <router-link :to="`/products/${item.id}`">
-      <div class="image">
-          <div class="sale">{{ item.Sale }}</div>
-          <!-- sale-->
-          <img :src="item.image" alt="" />
-        </div>
-     </router-link>
+        <router-link :to="`/products/${item.id}`">
+          <div class="image">
+            <div class="sale">{{ item.Sale }}</div>
+            <!-- sale-->
+            <img :src="item.image" alt="" />
+          </div>
+        </router-link>
         <!-- end image -->
         <div class="content_image">
           <h5 class="name">{{ item.name }}</h5>

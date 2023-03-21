@@ -1,5 +1,9 @@
 .product_item{
     margin: var(--margin) auto;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 10px;
+    justify-content: flex-start;
     .container_item{
         text-transform: capitalize;
         width: 300px;            
