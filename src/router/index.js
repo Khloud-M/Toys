@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-   routes: [
+  routes: [
     { path: "/", component: () => import("@/pages/HomePage.vue") },
     { path: "/about", component: () => import("@/pages/nav/AboutSection.vue") },
     {
@@ -9,7 +9,7 @@ const router = createRouter({
       component: () => import("@/pages/nav/ContactSection.vue"),
     },
     { path: "/offer", component: () => import("@/pages/nav/OfferSection.vue") },
-  //   // auth page
+    // auth page
     {
       path: "/:auth",
       component: () => import("@/pages/auth/BasicPage.vue"),
@@ -44,6 +44,16 @@ const router = createRouter({
     {
       path: "/category/:id",
       component: () => import("@/pages/Categery/ItemCategery.vue"),
+      props: true,
+    },
+    {
+      path: "/brand/:id",
+      component: () => import("@/pages/Categery/ItemBrand.vue"),
+      props: true,
+    },
+    {
+      path: "/products/:id",
+      component: () => import("@/pages/ProductDetails.vue"),
       props: true,
     },
   ],

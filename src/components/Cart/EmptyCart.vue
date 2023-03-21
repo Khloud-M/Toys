@@ -63,8 +63,9 @@ export default {};
     }
   }
   .table > :not(caption) > * > * {
-    padding: 2px !important;
-    font-size: 12px;
+    padding: 0px !important;
+    font-size: 5px !important;
+    background-color: red;
   }
 }
 th {

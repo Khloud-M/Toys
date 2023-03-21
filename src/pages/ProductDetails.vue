@@ -33,7 +33,7 @@
           </h5>
           <!-- end price -->
           <div class="addCart d-flex">
-            <div><product-quantity :selectitem="selectitem" /></div>
+            <!-- <div><product-quantity :selectitem="selectitem" /></div> -->
             <base-button @click="addToCart">
               <v-icon icon="mdi-shopping-outline" size="20"></v-icon>
               {{ $t("placeholder.addCart") }}</base-button
@@ -69,12 +69,12 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import ProductQuantity from "@/components/Products/ProductQuantity.vue";
+// import ProductQuantity from "@/components/Products/ProductQuantity.vue";
 export default {
-  components: {
-    ProductQuantity,
-  },
   props: ["id"],
+  components: {
+    // ProductQuantity,
+  },
   data() {
     return {
       selectitem: null,

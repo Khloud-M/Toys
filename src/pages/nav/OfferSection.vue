@@ -33,6 +33,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
+  props:["id"],
   computed: {
     ...mapGetters({
       MoreSaling: "products/MoreSaling",

@@ -13,8 +13,8 @@
       </thead>
       <tbody>
         <tr v-for="item in cart" :key="item.id">
-          <th>
-            <img :src="item.selectitem.image" width="100" height="100" />
+          <th class="image">
+            <img :src="item.selectitem.image" />
           </th>
           <td>
             {{ item.selectitem.name }}
@@ -70,6 +70,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+}
+.image {
+  width: 150px;
+  height: 100px;
+  img {
+    width: 100%;
+  }
+}
 .summary {
   border: 1px solid var(--border-color);
   padding: 20px 40px;
