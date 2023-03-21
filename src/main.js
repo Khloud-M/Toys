@@ -7,7 +7,9 @@ import i18n from "./i18n";
 import { registerPlugins } from "@/plugins";
 // import public page
 import TheHeader from "@/components/Header/TheHeader.vue";
+import TheFooter from "@/components/layout/TheFooter.vue";
 import LandingPage from "./components/layout/LandingPage.vue";
+import LandingCat from "@/pages/Categery/LandingCategery.vue";
 // import ui Base Button  page
 import BaseButton from "@/components/ui/BaseButton.vue";
 import HeadingSection from "@/components/ui/HeadingSection.vue";
@@ -32,12 +34,16 @@ const vuetify = createVuetify({
   components,
   directives,
 });
+import VOtpInput from "vue3-otp-input";
 
 const app = createApp(App);
 app.component("the-header", TheHeader);
+app.component("the-footer", TheFooter);
 app.component("base-button", BaseButton);
 app.component("heading-section", HeadingSection);
 app.component("landing-page", LandingPage);
+app.component("landing-cat", LandingCat);
+app.component("v-otp-input", VOtpInput);
 
 registerPlugins(app);
 app.use(router);

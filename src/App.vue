@@ -1,12 +1,46 @@
 <template>
-  <v-app>
+  <v-app :class="$i18n.locale == 'ar' ? 'is-rtl' : ''">
     <the-header v-if="!$route.params.auth" />
-
     <v-main>
-      <router-view></router-view>
+      <transition name="route" mode="out-in">
+        <router-view />
+      </transition>
     </v-main>
+    <the-footer v-if="!$route.params.auth" />
   </v-app>
 </template>
 
-<script setup>
+<script >
+import i18n from "./i18n";
+export default {
+  mounted() {
+    if (i18n.global.locale == "en") {
+      document.body.dir = "ltr";
+    } else {
+      document.body.dir = "rtl";
+    }
+  },
+};
 </script>
+<style lang="scss">
+.route-enter-from {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.route-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.route-enter-active {
+  transition: all 0.3s ease-out;
+}
+.route-leave-active {
+  transition: all 0.3s ease-in;
+}
+.route-enter-to,
+.route-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
