@@ -173,6 +173,12 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   margin: var(--margin) auto;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 18px;
+    }
+  }
 }
 .contact {
   border: 1px solid var(--border-color);

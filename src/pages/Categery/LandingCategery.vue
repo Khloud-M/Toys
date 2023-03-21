@@ -13,7 +13,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  props:["id"],
+  props: ["id"],
   computed: {
     ...mapGetters({
       Categories: "products/Categories",
@@ -30,12 +30,26 @@ export default {
   height: 11vh;
   color: var(--second-color);
   margin-bottom: var(--margin);
+  @media (max-width: 1024px) {
+    & {
+      height: 22vh;
+    }
+  }
 }
 .container {
   justify-content: space-between;
   height: 100%;
   padding-top: 30px;
   text-transform: capitalize;
+  align-items: center;
+  @media (max-width: 768px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+    }
+  }
 
   h3 {
     font-weight: 400;
