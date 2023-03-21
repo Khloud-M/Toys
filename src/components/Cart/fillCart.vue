@@ -65,7 +65,6 @@ export default {
     RemoveItem() {
       this.$store.commit("products/RemoveItem", this.i);
     },
-
   },
 };
 </script>
@@ -82,6 +81,11 @@ export default {
   .btn {
     width: 100% !important;
     margin: 20px 0;
+  }
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+    }
   }
 }
 </style>

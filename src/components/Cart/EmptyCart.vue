@@ -24,7 +24,7 @@
         </tr>
       </tbody>
     </table>
-    <!-- <div class="summary">
+    <div class="summary">
       <h5>{{ $t("placeholder.remember6") }}</h5>
       <div class="d-flex justify-content-between">
         <h6>{{ $t("placeholder.subtotal") }}</h6>
@@ -38,7 +38,7 @@
           {{ $t("placeholder.Completepay") }}
         </base-button>
       </router-link>
-    </div> -->
+    </div>
   </section>
 </template>
 
@@ -47,37 +47,31 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 1000px) {
-  // .emptycart {
-  //   background-color: red;
-  // }
+@media (max-width: 768px) {
   table {
     width: 100% !important;
+    .empty_image {
+      h5 {
+        font-size: 16px;
+      }
+      width: 150px;
+      height: 200px;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
   }
   .table > :not(caption) > * > * {
-  padding: 2px !important;
-  font-size: 12px;
-}
-// th{
-//   font-size: 15px !important;
-// }
-  .empty_image {
-    h5{
-      font-size: 16px;
-    }
-    width: 150px;
-    height: 200px;
-    margin: auto;
-    img {
-      width: 100%;
-    }
+    padding: 2px !important;
+    font-size: 12px;
   }
 }
 th {
   text-transform: capitalize;
 }
 .table > :not(caption) > * > * {
-  padding: 20px ;
+  padding: 20px;
 }
 .empty_image {
   h5 {
@@ -99,6 +93,11 @@ th {
   .btn {
     width: 100% !important;
     margin: 20px 0;
+  }
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+    }
   }
 }
 </style>
