@@ -37,7 +37,7 @@ export default {
     rebackWidth() {
       if (this.search === "") return (this.Width = "90");
       else {
-        return (this.Width = "270");
+        return (this.Width = "250");
       }
     },
   },
@@ -49,7 +49,7 @@ export default {
   background-color: var(--bg-color-light);
   border-radius: 15px;
   padding: 10px 15px;
-  width: 500px;
+  width: 450px;
   justify-content: space-between;
   align-items: center;
   .search {
@@ -61,7 +61,7 @@ export default {
     }
   }
   .categery {
-    width: 230px;
+    width: 180px;
     .form-select {
       background-color: transparent;
       border: none;

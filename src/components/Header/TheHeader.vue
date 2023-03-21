@@ -34,7 +34,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-              Offcanvas
+              Main List
             </h5>
             <button
               type="button"
@@ -43,10 +43,10 @@
               aria-label="Close"
             ></button>
           </div>
+          <hr />
           <div class="offcanvas-body">
-            <div>
-              Some text as placeholder. In real life you can have the elements
-              you have chosen. Like, text, images, lists, etc.
+            <div >
+              <search-categery class="search_cat" />
             </div>
           </div>
         </div>
@@ -58,9 +58,11 @@
 </template>
 <script>
 import LargeScreen from "@/components/Header/LargeScreen.vue";
+import SearchCategery from "./SearchCategery.vue";
 export default {
   components: {
     LargeScreen,
+    SearchCategery,
   },
 };
 </script>
@@ -120,19 +122,16 @@ export default {
         background-color: var(--main-color);
       }
     }
+    .btn-close:focus {
+      box-shadow: 0 0 0 0rem;
+      border: 2px solid var(--color-yellow);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .search_cat {
+      width: 100% !important;
+    }
   }
-}
-
-.mobile-nav-enter-active,
-.mobile-nav-leave-active {
-  transition: all 1s ease-in-out;
-}
-.mobile-nav-enter-from,
-.mobile-nav-leave-to {
-  transform: translateX(-150%);
-}
-.mobile-nav-enter-to {
-  transform: translateX(0%);
 }
 </style>
 
