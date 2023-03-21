@@ -65,10 +65,11 @@
               </li>
               <li>
                 <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option selected v-for="cat in Categories">
+                    <router-link :to="`/category/${cat.id}`">
+                      {{ cat.itemName }}
+                    </router-link>
+                  </option>
                 </select>
               </li>
               <li>
@@ -94,11 +95,17 @@
 <script>
 import LargeScreen from "@/components/Header/LargeScreen.vue";
 import SearchCategery from "./SearchCategery.vue";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
     LargeScreen,
     SearchCategery,
+  },
+  computed: {
+    ...mapGetters({
+      Categories: "products/Categories",
+    }),
   },
 };
 </script>
@@ -178,6 +185,30 @@ export default {
         flex-direction: row;
         column-gap: 10px;
         align-items: center;
+      }
+      ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        li {
+          border-radius: 10px;
+          padding: 10px 15px;
+          background-color: var(--bg-color-light);
+        }
+        & > :nth-child(1) {
+          background-color: #fff6cd;
+          a {
+            color: var(--color-yellow);
+          }
+        }
+        .form-select {
+          background-color: transparent !important;
+          border: 0 !important;
+        }
+        .form-select:focus {
+          box-shadow: 0 0 0 0;
+        }
       }
     }
   }
