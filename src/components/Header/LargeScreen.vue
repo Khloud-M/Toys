@@ -2,18 +2,6 @@
   <div class="large_nav">
     <div class="top_header">
       <div class="icon_categery">
-        <button
-          class="button-cart"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample"
-          aria-controls="offcanvasExample"
-        >
-          <h3>
-            <v-icon icon=" mdi-dots-horizontal"> </v-icon>
-            {{ $t("navs.Categories") }}
-          </h3>
-        </button>
         <CategeryCart />
       </div>
       <ul>
@@ -37,7 +25,7 @@
           {{ $t("buttons.signIn") }}</router-link
         >
         <v-icon size="27" icon="mdi-bell"></v-icon>
-       
+
         <TheCart />
       </ul>
     </div>
@@ -47,22 +35,22 @@
 
 <script>
 import ChangeLang from "@/components/Header/ChangeLang.vue";
-// import CategeryCart from "@/components/Home/CategeryCart.vue";
+import CategeryCart from "@/components/Home/CategeryCart.vue";
 import TheCart from "@/components/Cart/TheCart.vue";
 import SearchCategery from "./SearchCategery.vue";
-// import { mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 export default {
   components: {
     ChangeLang,
-    //  CategeryCart,
+     CategeryCart,
     TheCart,
     SearchCategery,
   },
-  // computed: {
-  //   ...mapGetters({
-  //     cart: "products/cart",
-  //   }),
-  // },
+  computed: {
+    ...mapGetters({
+      cart: "products/cart",
+    }),
+  },
 };
 </script>
 
@@ -82,23 +70,23 @@ export default {
     }
   }
   .top_header {
-    .icon_categery {
-      cursor: pointer;
-      transition: all var(--transtion) ease-in-out;
-      &:hover h3,
-      &:hover .v-icon {
-        color: var(--color-yellow);
-      }
-      h3 {
-        color: var(--main-color);
-        font-size: 15px;
-        transition: all var(--transtion) ease-in-out;
-        .v-icon {
-          color: var(--main-color);
-          transition: all var(--transtion) ease-in-out;
-        }
-      }
-    }
+    // .icon_categery {
+    //   cursor: pointer;
+    //   transition: all var(--transtion) ease-in-out;
+    //   &:hover h3,
+    //   &:hover .v-icon {
+    //     color: var(--color-yellow);
+    //   }
+    //   h3 {
+    //     color: var(--main-color);
+    //     font-size: 15px;
+    //     transition: all var(--transtion) ease-in-out;
+    //     .v-icon {
+    //       color: var(--main-color);
+    //       transition: all var(--transtion) ease-in-out;
+    //     }
+    //   }
+    // }
     a {
       transition: all var(--transtion) ease-in-out;
       &:hover {
