@@ -51,7 +51,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .icon_categery {
   cursor: pointer;
   transition: all var(--transtion) ease-in-out;

@@ -48,7 +48,6 @@
               Some text as placeholder. In real life you can have the elements
               you have chosen. Like, text, images, lists, etc.
             </div>
-            <TheCart />
           </div>
         </div>
       </div>
@@ -59,11 +58,9 @@
 </template>
 <script>
 import LargeScreen from "@/components/Header/LargeScreen.vue";
-import TheCart from "@/components/Cart/TheCart.vue";
 export default {
   components: {
     LargeScreen,
-    TheCart,
   },
 };
 </script>
