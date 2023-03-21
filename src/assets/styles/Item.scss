@@ -6,7 +6,13 @@
     justify-content: flex-start;
     .container_item{
         text-transform: capitalize;
-        width: 300px;            
+        width: 300px;   
+        @media (max-width: 768px) {
+            &{
+              width: 250px !important; 
+              margin: auto;  
+            }        
+        }         
          .image{
          background-color: var( --bg-color-light);
          border-radius: 15px;

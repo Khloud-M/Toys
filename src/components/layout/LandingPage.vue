@@ -28,7 +28,7 @@ export default {
   height: 11vh;
   color: var(--second-color);
   margin-bottom: var(--margin);
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     & {
       height: 22vh;
     }
@@ -40,6 +40,7 @@ export default {
   padding-top: 30px;
   text-transform: capitalize;
   flex-wrap: wrap;
+  align-items: center;
   @media (max-width: 768px) {
     & {
       display: flex;
@@ -47,7 +48,6 @@ export default {
       align-items: center;
       row-gap: 10px;
     }
-  
   }
 
   h3 {

@@ -37,7 +37,7 @@
           </ul>
         </div>
         <!-- second col -->
-        <div class="col-lg-2 col-md-6">
+        <div class="col-lg-2 col-md-6 col-xs-12">
           <h6>{{ $t("footer.Information") }}</h6>
           <ul>
             <router-link to="/about"> {{ $t("navs.aboutUs") }}</router-link>
@@ -48,7 +48,7 @@
           </ul>
         </div>
         <!-- third col -->
-        <div class="col-lg-2 col-md-6">
+        <div class="col-lg-2 col-md-6 col-xs-12">
           <h6>{{ $t("footer.Account") }}</h6>
           <ul>
             <router-link to=""> {{ $t("footer.Account") }}</router-link>

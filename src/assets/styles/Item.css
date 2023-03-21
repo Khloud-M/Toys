@@ -10,6 +10,12 @@
   text-transform: capitalize;
   width: 300px;
 }
+@media (max-width: 768px) {
+  .product_item .container_item {
+    width: 250px !important;
+    margin: auto;
+  }
+}
 .product_item .container_item .image {
   background-color: var(--bg-color-light);
   border-radius: 15px;

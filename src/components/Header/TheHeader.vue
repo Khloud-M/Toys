@@ -54,12 +54,16 @@
                 {{ $t("buttons.signIn") }}</router-link
               >
               <router-link to="/ShoppingCart">
-                <v-icon size="27" icon="mdi-shopping-outline" data-bs-dismiss="offcanvas"></v-icon>
+                <v-icon
+                  size="27"
+                  icon="mdi-shopping-outline"
+                  data-bs-dismiss="offcanvas"
+                ></v-icon>
               </router-link>
             </div>
             <ul>
               <li>
-                <router-link to="/">
+                <router-link to="/" data-bs-dismiss="offcanvas">
                   <h3>Main List</h3>
                 </router-link>
               </li>
@@ -73,13 +77,17 @@
                 </select>
               </li>
               <li>
-                <router-link to="/offer"> {{ $t("navs.offer") }}</router-link>
+                <router-link to="/offer" data-bs-dismiss="offcanvas">
+                  {{ $t("navs.offer") }}</router-link
+                >
               </li>
               <li>
-                <router-link to="/about"> {{ $t("navs.aboutUs") }}</router-link>
+                <router-link to="/about" data-bs-dismiss="offcanvas">
+                  {{ $t("navs.aboutUs") }}</router-link
+                >
               </li>
               <li>
-                <router-link to="/Contact">
+                <router-link to="/Contact" data-bs-dismiss="offcanvas">
                   {{ $t("navs.contactUs") }}</router-link
                 >
               </li>

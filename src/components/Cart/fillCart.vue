@@ -71,6 +71,9 @@ export default {
 
 <style lang="scss" scoped>
 @media (max-width: 768px) {
+  table {
+    overflow: auto !important;
+  }
   .image {
     img {
       width: 100%;
