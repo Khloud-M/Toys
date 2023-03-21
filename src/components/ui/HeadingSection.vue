@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="heading">
     <h2>
       <slot></slot>
     </h2>
@@ -8,40 +8,42 @@
 </template>
 
 <style lang="scss" scoped>
-hr {
-  border-color: var(--border-color) !important;
-  opacity: 1 !important;
-}
-h2 {
-  color: var(--main-color);
-  font-size: 24px;
-  font-weight: 500;
-  text-transform: capitalize;
-  position: relative !important;
-  @media (max-width: 768px) {
-    & {
-      font-size: 20px;
+.heading {
+  hr {
+    border-color: var(--border-color) !important;
+    opacity: 1 !important;
+  }
+  h2 {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: capitalize;
+    position: relative !important;
+    @media (max-width: 768px) {
+      & {
+        font-size: 20px;
+      }
     }
   }
-}
-h2::after {
-  content: "";
-  position: absolute !important;
-  width: 180px;
-  height: 2px;
-  left: 15%;
-  bottom: -16px;
-  background: var(--color-yellow);
-  @media (max-width: 768px) {
-    & {
-      width: 110px;
-      left: 3%;
+  h2::after {
+    content: "";
+    position: absolute !important;
+    width: 180px;
+    height: 2px;
+    left: 15%;
+    bottom: -16px;
+    background: var(--color-yellow);
+    @media (max-width: 768px) {
+      & {
+        width: 110px;
+        left: 3%;
+      }
     }
-  }
-  @media (min-width: 769px) and (max-width: 1025px) {
-    & {
-      width: 140px;
-      left: 3%;
+    @media (min-width: 769px) and (max-width: 1025px) {
+      & {
+        width: 140px;
+        left: 3%;
+      }
     }
   }
 }

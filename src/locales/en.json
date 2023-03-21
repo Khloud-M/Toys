@@ -119,7 +119,9 @@
     "Image": "Image",
     "fav":"Add To Favourite",
     "addCart":" Add to Cart",
-    "moreSale":"More Selling"
+    "moreSale":"More Selling",
+    "LastAdd":"Last Add",
+    "HighestRating":"Highest Rating"
   },
   "buttons": {
     "signIn": "Login",

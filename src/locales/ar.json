@@ -99,7 +99,9 @@
     "subtotal":"المجموع الفرعي",
     "fav":"أضف للمفضلة",
     "addCart":"أضف للسلة",
-    "More Selling":"الأكثر مبيعا"
+    "moreSale":"الأكثر مبيعا",
+    "HighestRating":"الأعلى تقييما",
+    "LastAdd":"اخر إضافة"
   },
   "buttons": {
     "signIn": "تسجيل الدخول",
