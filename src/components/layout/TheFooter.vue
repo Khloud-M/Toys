@@ -203,7 +203,7 @@ footer {
       height: 40px;
     }
     .image {
-      margin-top: -20px;
+      margin-top: -10px;
       position: relative;
       .shape1,
       .shape2 {
