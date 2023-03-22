@@ -1,29 +1,31 @@
 <template>
   <section class="emptycart">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">{{ $t("placeholder.Image") }}</th>
-          <th scope="col">{{ $t("placeholder.Name") }}</th>
-          <th scope="col">{{ $t("placeholder.Price") }}</th>
-          <th scope="col">{{ $t("placeholder.Quantity") }}</th>
-          <th scope="col">{{ $t("placeholder.total") }}</th>
-          <th scope="col">{{ $t("buttons.Delete") }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td colspan="6">
-            <div class="empty_image">
-              <img src="@/assets/images/empty-cart.svg" alt="emptycart" />
-              <h5>
-                {{ $t("placeholder.emptyCart") }}
-              </h5>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="shopping_cart">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">{{ $t("placeholder.Image") }}</th>
+            <th scope="col">{{ $t("placeholder.Name") }}</th>
+            <th scope="col">{{ $t("placeholder.Price") }}</th>
+            <th scope="col">{{ $t("placeholder.Quantity") }}</th>
+            <th scope="col">{{ $t("placeholder.total") }}</th>
+            <th scope="col">{{ $t("buttons.Delete") }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="6">
+              <div class="empty_image">
+                <img src="@/assets/images/empty-cart.svg" alt="emptycart" />
+                <h5>
+                  {{ $t("placeholder.emptyCart") }}
+                </h5>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="summary">
       <h5>{{ $t("placeholder.remember6") }}</h5>
       <div class="d-flex justify-content-between">
@@ -48,6 +50,13 @@ export default {};
 
 <style lang="scss" scoped>
 @media (max-width: 768px) {
+  .shopping_cart {
+    position: relative;
+    overflow: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+  }
   table {
     width: 100% !important;
     .empty_image {
@@ -63,9 +72,12 @@ export default {};
     }
   }
   .table > :not(caption) > * > * {
-    padding: 0px !important;
+    padding: 5px 0px !important;
     font-size: 5px !important;
-    background-color: red;
+    background-color: red !important;
+  }
+  table th {
+    background-color: blue !important;
   }
 }
 th {

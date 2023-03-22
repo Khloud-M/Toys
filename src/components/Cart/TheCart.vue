@@ -168,7 +168,7 @@ export default {
       align-self: flex-start;
       .v-icon {
         color: var(--red-color);
-        background-color: var(--color-yellow);
+        background-color: #fde5ea;
         width: 35px;
         height: 35px;
         border-radius: 50%;

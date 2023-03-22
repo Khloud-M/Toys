@@ -11,6 +11,9 @@
     --transtion:0.4s;
    
 }
+*{
+  box-sizing: border-box;
+}
 a {
     text-decoration: none;
     color: var(--main-color);

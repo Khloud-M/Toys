@@ -30,7 +30,7 @@ export default {
   margin-bottom: var(--margin);
   @media (max-width: 1024px) {
     & {
-      height: 22vh;
+      height: 15vh;
     }
   }
 }
@@ -59,7 +59,6 @@ export default {
     }
     display: flex;
     flex-direction: row;
-    width: 200px;
     justify-content: space-between;
     align-items: center;
     & > :nth-child(1) {
