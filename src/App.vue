@@ -1,5 +1,5 @@
 <template>
-  <v-app :class="$i18n.locale == 'ar' ? 'is-rtl' : ''">
+  <v-app :class="$i18n.locale == 'ar' ? 'is-rtl' : 'is-ltr'">
     <the-header v-if="!$route.params.auth" />
     <v-main>
       <transition name="route" mode="out-in">
