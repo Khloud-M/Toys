@@ -35,6 +35,13 @@
   width: 55%;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .auth_page .row {
+    width: 95%;
+    top: 150px;
+    position: absolute;
+  }
+}
 
 .form {
   padding: 20px 30px;
@@ -86,6 +93,24 @@
 .form .check_pass .form-select {
   padding: 15px 10px;
   border-radius: 10px;
+}
+@media (max-width: 1024px) {
+  .form .phone {
+    display: flex;
+    flex-direction: column;
+  }
+  .form .phone > div {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .form .check_pass {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .form .check_pass label {
+    font-size: 15px;
+  }
 }
 .form .check_pass input {
   width: 30px !important;

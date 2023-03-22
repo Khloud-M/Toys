@@ -21,6 +21,7 @@
       position: absolute;
       left:7%;
       top: 50px;
+
     }
     .row {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
@@ -33,6 +34,14 @@
     min-height: 500px;
     width: 55%;
     margin: auto; 
+    @media (max-width: 768px) {
+      &{
+      width: 95%;
+      top: 150px;
+      position: absolute;
+
+      }
+    }
   }
   
   }
@@ -74,6 +83,7 @@
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
+
         .form-select:focus {
             border-color: var(--border-color);
             outline: 0;
@@ -84,7 +94,31 @@
         border-radius: 10px;
         }
       }
+      .phone{
+       @media (max-width: 1024px) {
+        &{
+          display: flex;
+          flex-direction: column;
+
+        }
+        & > div {
+          width: 100%;
+          
+        }
+        
+       }
+      }
       .check_pass{
+        @media (max-width: 1024px) {
+          &{
+            flex-direction: column;
+            row-gap: 10px;
+            label{
+              font-size: 15px;
+            }
+          }
+          
+        }
         input{
             width: 30px !important;
         }

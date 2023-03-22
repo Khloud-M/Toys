@@ -36,13 +36,13 @@ export default {
       if (this.verificationType === "ResetPassword") {
         this.$router.push("/:auth/resetpass");
       } else {
-        this.$router.push("/:auth");
+        this.$router.push("/");
       }
     },
   },
 };
 </script>
-<style >
+<style lang="scss" >
 .myOtp {
   display: flex;
   flex-direction: row;
@@ -50,6 +50,11 @@ export default {
 }
 .myOtp input {
   width: 100px !important;
+  @media (max-width: 768px) {
+    &{
+      width: 50px !important;
+    }
+  }
 }
 /* Background colour of an input field with value */
 .otp-input.is-complete {

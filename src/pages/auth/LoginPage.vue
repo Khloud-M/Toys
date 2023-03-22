@@ -59,18 +59,7 @@ export default {
   },
   methods: {
     submitForm() {
-      const myData = new FormData();
-      myData.append("phone", this.phone);
-      myData.append("password", this.password);
-      this.axios({
-        method: "POST",
-        url: "login",
-        data: myData,
-      }).then((response) => {
-        console.log(response);
-        // this.$router.push("/");
-        console.log("done")
-      });
+      this.$router.push("/");
     },
   },
 };

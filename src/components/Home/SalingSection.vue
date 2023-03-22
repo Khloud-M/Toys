@@ -6,7 +6,13 @@
       </div>
     </heading-section>
     <div class="container product_item d-flex">
-      <Carousel :items-to-show="4" :transition="1000" :itemsToScroll="1" :autoplay="2000">
+      <Carousel
+        :items-to-show="4"
+        :wrap-around="true"
+        transition="300"
+        autoplay="2000"
+        :breakpoints="breakpoints"
+      >
         <Slide v-for="slide in MoreSaling" :key="slide">
           <div class="carousel__item container_item">
             <div class="image">
@@ -45,10 +51,25 @@ import { defineComponent } from "vue";
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 export default defineComponent({
+  name: "Breakpoints",
   components: {
     Carousel,
     Slide,
     Navigation,
+  },
+  breakpoints: {
+    1201: {
+      itemsToShow: 3.5,
+      snapAlign: "start",
+    },
+    481: {
+      itemsToShow: 2,
+      snapAlign: "start",
+    },
+    320: {
+      itemsToShow: 1,
+      snapAlign: "center",
+    },
   },
   props: ["id"],
   computed: {
@@ -67,10 +88,23 @@ export default defineComponent({
   }
   .carousel__prev {
     left: -100px !important;
+    @media (max-width: 768px) {
+      & {
+        left: 0px !important;
+        display: none !important;
+
+      }
+    }
   }
   .carousel__next {
     color: red !important;
     right: -100px !important;
+    @media (max-width: 768px) {
+      & {
+        right: 0px !important;
+        display: none !important;
+      }
+    }
   }
 }
 </style>
