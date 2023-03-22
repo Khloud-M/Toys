@@ -75,12 +75,14 @@ th {
   padding: 20px;
 }
 .empty_image {
+  width: 300px;
+  margin: auto;
+
   h5 {
     text-align: center;
   }
   img {
-    display: block;
-    margin: auto;
+    width: 100%;
   }
 }
 .summary {

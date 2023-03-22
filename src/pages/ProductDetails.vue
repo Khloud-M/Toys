@@ -5,7 +5,7 @@
         <img :src="selectitem.image" />
       </div>
       <!-- end image div -->
-      <div class="col-lg-6 col-xs-12">
+      <div class="col-lg-6 col-xs-12 content_details">
         <div class="item_details">
           <h6>{{ selectitem.name }}</h6>
           <div class="discription">
@@ -33,7 +33,7 @@
           </h5>
           <!-- end price -->
           <div class="addCart d-flex">
-            <!-- <div><product-quantity :selectitem="selectitem" /></div> -->
+            <div><product-quantity :selectitem="selectitem" /></div>
             <base-button @click="addToCart">
               <v-icon icon="mdi-shopping-outline" size="20"></v-icon>
               {{ $t("placeholder.addCart") }}</base-button
@@ -69,11 +69,11 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-// import ProductQuantity from "@/components/Products/ProductQuantity.vue";
+import ProductQuantity from "@/components/Products/ProductQuantity.vue";
 export default {
   props: ["id"],
   components: {
-    // ProductQuantity,
+    ProductQuantity,
   },
   data() {
     return {
@@ -104,9 +104,19 @@ export default {
 .container {
   margin: var(--margin) auto;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
+  }
+  .content_details {
+    padding: 15px;
+  }
   .image {
     // width: 400px;
-    background-color: var( --bg-color-light);
+    background-color: var(--bg-color-light);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -129,8 +139,15 @@ export default {
     .item_name {
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      row-gap: 10px;
       h4 {
         text-transform: capitalize;
+        @media (max-width: 768px) {
+          & {
+            font-size: 19px ;
+          }
+        }
       }
       button {
         background-color: #fde5ea !important;
