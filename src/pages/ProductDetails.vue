@@ -1,5 +1,6 @@
 <template>
   <section>
+    <LandingProduct  :selectitem="selectitem" />
     <div class="container d-flex" v-if="selectitem">
       <div class="col-lg-5 col-xs-12 image">
         <img :src="selectitem.image" />
@@ -70,10 +71,12 @@
 <script>
 import { mapGetters } from "vuex";
 import ProductQuantity from "@/components/Products/ProductQuantity.vue";
+import LandingProduct from "@/components/Products/LandingProduct.vue";
 export default {
   props: ["id"],
   components: {
     ProductQuantity,
+    LandingProduct
   },
   data() {
     return {
