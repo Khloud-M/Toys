@@ -50,13 +50,6 @@ export default {};
 
 <style lang="scss" scoped>
 @media (max-width: 768px) {
-  .shopping_cart {
-    position: relative;
-    overflow: auto;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-  }
   table {
     width: 100% !important;
     .empty_image {
@@ -72,13 +65,10 @@ export default {};
     }
   }
   .table > :not(caption) > * > * {
-    padding: 5px 0px !important;
+    padding: 5px 2px !important;
     font-size: 5px !important;
-    background-color: red !important;
   }
-  table th {
-    background-color: blue !important;
-  }
+
 }
 th {
   text-transform: capitalize;
