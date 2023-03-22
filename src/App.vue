@@ -23,6 +23,13 @@ export default {
 };
 </script>
 <style lang="scss">
+.is-ltr {
+  direction: ltr;
+}
+.is-rtl {
+  direction: rtl;
+}
+
 .route-enter-from {
   opacity: 0;
   transform: translateY(-30px);

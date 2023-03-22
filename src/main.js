@@ -2,7 +2,7 @@ import App from "./App.vue";
 import { createApp } from "vue";
 import router from "./router";
 import store from "./store";
-import i18n from './i18n';
+// import i18n from './i18n';
 
 // Plugins
 import { registerPlugins } from "@/plugins";
@@ -17,6 +17,9 @@ import HeadingSection from "@/components/ui/HeadingSection.vue";
 // bootsrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+// import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap-vue/dist/bootstrap-vue.css";
+// import bootstrap from 'bootstrap';
 // import Aos library
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -36,6 +39,7 @@ const vuetify = createVuetify({
   directives,
 });
 import VOtpInput from "vue3-otp-input";
+import i18n from "./i18n";
 
 const app = createApp(App);
 app.component("the-header", TheHeader);
@@ -51,5 +55,7 @@ app.use(router);
 app.use(store);
 app.use(i18n);
 app.use(vuetify);
+// app.use(bootstrap);
+
 
 app.mount("#app");

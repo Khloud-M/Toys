@@ -11,6 +11,12 @@
     --transtion:0.4s;
    
 }
+.is-ltr {
+  direction: ltr;
+}
+.is-rtl {
+  direction: rtl;
+}
 * {
   padding: 0;
   margin: 0;
