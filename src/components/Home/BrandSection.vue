@@ -1,7 +1,7 @@
 <template>
   <section>
     <heading-section>
-      <div class="container">
+      <div>
         {{ $t("placeholder.brand") }}
       </div>
     </heading-section>

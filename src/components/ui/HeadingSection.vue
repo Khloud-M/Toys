@@ -1,6 +1,6 @@
 <template>
   <div class="heading">
-    <h2>
+    <h2 class="container">
       <slot></slot>
     </h2>
     <hr />
@@ -30,7 +30,7 @@
     position: absolute !important;
     width: 180px;
     height: 2px;
-    left: 15%;
+    left: 0%;
     bottom: -16px;
     background: var(--color-yellow);
     @media (max-width: 768px) {

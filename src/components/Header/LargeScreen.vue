@@ -2,7 +2,7 @@
   <div class="large_nav">
     <div class="top_header">
       <div>
-        <CategeryCart />
+        <!-- <CategeryCart /> -->
       </div>
       <ul>
         <router-link to="/offer"> {{ $t("navs.offer") }}</router-link>
@@ -35,7 +35,7 @@
 
 <script>
 import ChangeLang from "@/components/Header/ChangeLang.vue";
-import CategeryCart from "@/components/Home/CategeryCart.vue";
+// import CategeryCart from "@/components/Home/CategeryCart.vue";
 import TheCart from "@/components/Cart/TheCart.vue";
 import SearchCategery from "./SearchCategery.vue";
 import { mapGetters } from "vuex";
@@ -44,7 +44,7 @@ export default {
 
   components: {
     ChangeLang,
-     CategeryCart,
+    //  CategeryCart,
     TheCart,
     SearchCategery,
   },
