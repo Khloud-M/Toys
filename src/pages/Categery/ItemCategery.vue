@@ -1,6 +1,6 @@
 <template>
   <section>
-    <landing-cat />
+    <landing-cat  :selectitem="selectitem"/>
     <div class="container product_item d-flex" v-if="selectitem">
       <div
         class="container_item col-lg-3"

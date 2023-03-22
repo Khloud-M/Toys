@@ -1,11 +1,11 @@
 <template>
   <section class="landing">
-    <div class="container d-flex">
-      <h3>catname</h3>
+    <div class="container d-flex" v-if="selectitem">
+      <h3>{{ selectitem.itemName }}</h3>
       <ul>
         <li><router-link to="/">home</router-link></li>
         <li><v-icon icon="mdi-arrow-right-thin"></v-icon></li>
-        <li>catname</li>
+        <li>{{ selectitem.itemName }}</li>
       </ul>
     </div>
   </section>
@@ -13,7 +13,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  props: ["id"],
+  props: ["id", "selectitem"],
   computed: {
     ...mapGetters({
       Categories: "products/Categories",
@@ -32,7 +32,7 @@ export default {
   margin-bottom: var(--margin);
   @media (max-width: 1024px) {
     & {
-      height: 22vh;
+      height: 15vh;
     }
   }
 }
@@ -41,6 +41,7 @@ export default {
   height: 100%;
   padding-top: 30px;
   text-transform: capitalize;
+  flex-wrap: wrap;
   align-items: center;
   @media (max-width: 768px) {
     & {
@@ -60,7 +61,6 @@ export default {
     }
     display: flex;
     flex-direction: row;
-    width: 200px;
     justify-content: space-between;
     align-items: center;
     & > :nth-child(1) {
