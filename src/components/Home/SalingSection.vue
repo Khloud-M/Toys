@@ -9,8 +9,8 @@
       <Carousel
         :items-to-show="4"
         :wrap-around="true"
-        transition="300"
-        autoplay="2000"
+        :transition="300"
+        :autoplay="2000"
         :breakpoints="breakpoints"
       >
         <Slide v-for="slide in MoreSaling" :key="slide">
@@ -50,28 +50,36 @@ import { mapGetters } from "vuex";
 import { defineComponent } from "vue";
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
+
 export default defineComponent({
-  name: "Breakpoints",
   components: {
     Carousel,
     Slide,
     Navigation,
   },
-  breakpoints: {
-    1201: {
-      itemsToShow: 3.5,
-      snapAlign: "start",
-    },
-    481: {
-      itemsToShow: 2,
-      snapAlign: "start",
-    },
-    320: {
-      itemsToShow: 1,
-      snapAlign: "center",
-    },
-  },
   props: ["id"],
+  data() {
+    return {
+      breakpoints: {
+        320: {
+          itemsToShow: 1,
+          snapAlign: "center",
+        },
+        481:{
+          itemsToShow: 2,
+          snapAlign: "start",
+        },
+        769:{
+          itemsToShow: 3,
+          snapAlign: "start",
+        },
+        1025:{
+          itemsToShow: 4,
+          snapAlign: "center",
+        }
+      },
+    };
+  },
   computed: {
     ...mapGetters({
       MoreSaling: "products/MoreSaling",
@@ -92,7 +100,6 @@ export default defineComponent({
       & {
         left: 0px !important;
         display: none !important;
-
       }
     }
   }
