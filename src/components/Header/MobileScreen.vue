@@ -113,7 +113,7 @@ export default {
   }
 }
 .container_dropdowm {
-  background-color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255, 1);
   position: fixed;
   top: 0;
   left: 0;
