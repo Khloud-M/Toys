@@ -52,6 +52,9 @@ export default {
 };
 </script>
 <style lang="scss">
+button{
+  background: none;
+}
 .icon_categery {
   cursor: pointer;
   transition: all var(--transtion) ease-in-out;
