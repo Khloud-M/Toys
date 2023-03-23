@@ -17,15 +17,46 @@
 .is-rtl {
   direction: rtl;
 }
+@font-face {
+  font-family: "Cairo-Bold";
+  src: local("Cairo"), url(../fonts/Cairo-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cairo-Regular";
+  src: local("Cairo"), url(../fonts/Cairo-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "semi";
+  src: local("Cairo"), url(../fonts/Cairo-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Medium";
+  src: local("Cairo"), url(../fonts/Cairo-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cairo";
+  src: local("Cairo"), url(../fonts/Cairo-Black.ttf) format("truetype");
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: Cairo-Regular;
+  font-family: "Cairo-Regular";
+
+}
+body{
+  font-size: Cairo-Regular;
+  font-family: "Cairo-Regular";
+
+
 }
 a {
     text-decoration: none;
     color: var(--main-color);
     transition: all var(--transtion) ease-in-out;
+  /* font-size: Cairo-Regular; */
+
 }
 li {
     list-style: none;

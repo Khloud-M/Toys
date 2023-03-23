@@ -2,11 +2,11 @@
   <section>
     <LandingProduct  :selectitem="selectitem" />
     <div class="container d-flex" v-if="selectitem">
-      <div class="col-lg-5 col-xs-12 image">
+      <div class="col-lg-5 image">
         <img :src="selectitem.image" />
       </div>
       <!-- end image div -->
-      <div class="col-lg-6 col-xs-12 content_details">
+      <div class="col-lg-6 content_details">
         <div class="item_details">
           <h6>{{ selectitem.name }}</h6>
           <div class="discription">
@@ -198,6 +198,17 @@ export default {
       top: 10px;
       background-color: var(--color-yellow);
       border-radius: 0px 12px 12px 0px;
+    }
+  }
+}
+.is-rtl {
+  h4{
+    &::before{
+      left: auto;
+      right: -25px;
+      border-radius: 12px 0px 0px 12px;
+
+
     }
   }
 }

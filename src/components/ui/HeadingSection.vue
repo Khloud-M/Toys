@@ -47,4 +47,10 @@
     }
   }
 }
+.is-rtl {
+  h2::after {
+    left: auto;
+    right: 0;
+  }
+}
 </style>

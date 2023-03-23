@@ -3,8 +3,20 @@
     <div class="container d-flex">
       <h3>{{ getPath }}</h3>
       <ul>
-        <li><router-link to="/">home</router-link></li>
-        <li><v-icon icon="mdi-arrow-right-thin"></v-icon></li>
+        <li>
+          <router-link to="/">
+            {{ $t("navs.home") }}
+          </router-link>
+        </li>
+        <li>
+          <!-- direction rtl -->
+          <div v-if="$i18n.locale == 'ar'">
+            <v-icon icon="mdi-arrow-left-thin" />
+          </div>
+
+          <!-- dirction ltr -->
+          <div v-else><v-icon icon="mdi-arrow-right-thin" /></div>
+        </li>
         <li>{{ getPath }}</li>
       </ul>
     </div>
