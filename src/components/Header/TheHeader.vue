@@ -13,88 +13,8 @@
       </div>
       <!-- logo -->
       <large-screen class="large_sreen col-lg-10" />
-      <div class="mobile_Screen">
-        <button
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample"
-          aria-controls="offcanvasExample"
-        >
-          <div class="bars_icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
-        <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasExample"
-          aria-labelledby="offcanvasExampleLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-              Main List
-            </h5>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <hr />
-          <div class="offcanvas-body">
-            <div>
-              <search-categery class="search_cat" />
-            </div>
-            <div class="login_cart">
-              <router-link to="/:auth">
-                <v-icon icon="mdi-account"> </v-icon>
-                {{ $t("buttons.signIn") }}</router-link
-              >
-              <router-link to="/ShoppingCart">
-                <v-icon
-                  size="27"
-                  icon="mdi-shopping-outline"
-                  data-bs-dismiss="offcanvas"
-                ></v-icon>
-              </router-link>
-            </div>
-            <ul>
-              <li>
-                <router-link to="/" data-bs-dismiss="offcanvas">
-                  <h3>Main List</h3>
-                </router-link>
-              </li>
-              <li>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected v-for="cat in Categories">
-                    <router-link :to="`/category/${cat.id}`">
-                      {{ cat.itemName }}
-                    </router-link>
-                  </option>
-                </select>
-              </li>
-              <li>
-                <router-link to="/offer" data-bs-dismiss="offcanvas">
-                  {{ $t("navs.offer") }}</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/about" data-bs-dismiss="offcanvas">
-                  {{ $t("navs.aboutUs") }}</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/Contact" data-bs-dismiss="offcanvas">
-                  {{ $t("navs.contactUs") }}</router-link
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <MobileScreen  class="mobile"/>
+
       <!-- mobile Screen -->
     </div>
     <!-- container -->
@@ -102,13 +22,27 @@
 </template>
 <script>
 import LargeScreen from "@/components/Header/LargeScreen.vue";
-import SearchCategery from "./SearchCategery.vue";
+import MobileScreen from "@/components/Header/MobileScreen.vue";
+// import SearchCategery from "./SearchCategery.vue";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
     LargeScreen,
-    SearchCategery,
+    // SearchCategery,
+    MobileScreen,
+  },
+  data() {
+    return {
+      mobileNav: false,
+      mobile: false,
+    };
+  },
+  methods: {
+    toggle() {
+      this.mobileNav = !this.mobileNav;
+      console.log("close");
+    },
   },
   computed: {
     ...mapGetters({
@@ -150,7 +84,7 @@ export default {
 
 // media screen
 @media (min-width: 1201px) {
-  .mobile_Screen {
+  .mobile {
     display: none;
   }
 }
@@ -158,29 +92,8 @@ export default {
   .large_sreen {
     display: none;
   }
-  .mobile_Screen {
+  .mobile {
     display: block;
-    .bars_icon {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      background-color: #fff6cd;
-      padding: 12px;
-      border-radius: 7px;
-      span {
-        width: 25px;
-        height: 1px;
-        background-color: var(--main-color);
-      }
-    }
-    .btn-close {
-      border: 2px solid var(--color-yellow) !important;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .btn-close:focus {
-      box-shadow: 0 0 0 0rem;
-    }
     .offcanvas-body {
       display: flex;
       flex-direction: column;
@@ -220,6 +133,61 @@ export default {
       }
     }
   }
+}
+.container_dropdowm {
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999999;
+  .content_dropdown {
+    height: 100%;
+    .close-nav {
+      width: 50px;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+      margin: 50px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 50px 0;
+      height: 50%;
+      // height: 600px;
+      a {
+        font-family: Medium;
+        color: white;
+        font-size: 18px;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  span {
+    width: 50px;
+    height: 2px;
+    background-color: black;
+  }
+}
+.mobile-nav-enter-active,
+.mobile-nav-leave-active {
+  transition: all 0.7s ease;
+}
+.mobile-nav-enter-from,
+.mobile-nav-leave-to {
+  transform: translateX(-100%);
 }
 </style>
 

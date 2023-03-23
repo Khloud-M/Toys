@@ -101,7 +101,8 @@
     "addCart":"أضف للسلة",
     "moreSale":"الأكثر مبيعا",
     "HighestRating":"الأعلى تقييما",
-    "LastAdd":"اخر إضافة"
+    "LastAdd":"اخر إضافة",
+    "mainList":"القائمة الرئيسية"
   },
   "buttons": {
     "signIn": "تسجيل الدخول",
