@@ -41,11 +41,11 @@
               </li>
               <li>
                 <select class="form-select" aria-label="Default select example">
-                  <!-- <option selected v-for="cat in Categories">
-                    <router-link :to="/category/${cat.id}">
+                  <option selected v-for="cat in Categories">
+                    <router-link :to="`/category/${cat.id}`">
                       {{ cat.itemName }}
                     </router-link>
-                  </option> -->
+                  </option>
                 </select>
               </li>
               <li>
@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import SearchCategery from "./SearchCategery.vue";
 import ChangeLang from "@/components/Header/ChangeLang.vue";
 export default {
@@ -81,11 +82,17 @@ export default {
     SearchCategery,
     ChangeLang,
   },
+  props: ["id"],
   data() {
     return {
       mobileNav: false,
       mobile: false,
     };
+  },
+  computed: {
+    ...mapGetters({
+      Categories: "products/Categories",
+    }),
   },
   methods: {
     toggle() {

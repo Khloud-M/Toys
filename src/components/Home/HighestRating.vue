@@ -1,7 +1,7 @@
 <template>
   <section class="Highest_Rating">
     <heading-section>
-      <div class="container">
+      <div>
         {{ $t("placeholder.HighestRating") }}
       </div>
     </heading-section>

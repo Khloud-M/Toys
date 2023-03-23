@@ -1,7 +1,7 @@
 <template>
   <section class="More_Salling">
     <heading-section>
-      <div class="container">
+      <div>
         {{ $t("placeholder.moreSale") }}
       </div>
     </heading-section>

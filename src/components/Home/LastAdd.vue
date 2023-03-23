@@ -1,7 +1,7 @@
 <template>
   <section class="Last_add">
     <heading-section>
-      <div class="container">
+      <div>
         {{ $t("placeholder.LastAdd") }}
       </div>
     </heading-section>
