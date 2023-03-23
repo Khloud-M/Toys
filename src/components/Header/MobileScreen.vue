@@ -18,45 +18,48 @@
               <search-categery class="search_cat" />
             </div>
             <div class="login_cart">
-              <router-link to="/:auth">
-                <v-icon icon="mdi-account"> </v-icon>
-                {{ $t("buttons.signIn") }}</router-link
-              >
-              <router-link to="/ShoppingCart">
-                <v-icon
-                  size="27"
-                  icon="mdi-shopping-outline"
-                  data-bs-dismiss="offcanvas"
-                ></v-icon>
-              </router-link>
+              <div>
+                <router-link to="/:auth">
+                  <v-icon icon="mdi-account"> </v-icon>
+                  {{ $t("buttons.signIn") }}</router-link
+                >
+                <router-link to="/ShoppingCart">
+                  <v-icon
+                    size="27"
+                    icon="mdi-shopping-outline"
+                    data-bs-dismiss="offcanvas"
+                  ></v-icon>
+                </router-link>
+              </div>
+              <ChangeLang />
             </div>
             <ul>
               <li>
-                <router-link to="/" data-bs-dismiss="offcanvas">
+                <router-link to="/" @click="toggle">
                   <h3>Main List</h3>
                 </router-link>
               </li>
               <li>
                 <select class="form-select" aria-label="Default select example">
-                  <option selected v-for="cat in Categories">
-                    <!-- <router-link :to="/category/${cat.id}">
+                  <!-- <option selected v-for="cat in Categories">
+                    <router-link :to="/category/${cat.id}">
                       {{ cat.itemName }}
-                    </router-link> -->
-                  </option>
+                    </router-link>
+                  </option> -->
                 </select>
               </li>
               <li>
-                <router-link to="/offer" data-bs-dismiss="offcanvas">
+                <router-link to="/offer" @click="toggle">
                   {{ $t("navs.offer") }}</router-link
                 >
               </li>
               <li>
-                <router-link to="/about" data-bs-dismiss="offcanvas">
+                <router-link to="/about" @click="toggle">
                   {{ $t("navs.aboutUs") }}</router-link
                 >
               </li>
               <li>
-                <router-link to="/Contact" data-bs-dismiss="offcanvas">
+                <router-link to="/Contact" @click="toggle">
                   {{ $t("navs.contactUs") }}</router-link
                 >
               </li>
@@ -72,10 +75,11 @@
 
 <script>
 import SearchCategery from "./SearchCategery.vue";
-
+import ChangeLang from "@/components/Header/ChangeLang.vue";
 export default {
   components: {
     SearchCategery,
+    ChangeLang,
   },
   data() {
     return {
@@ -109,7 +113,7 @@ export default {
   }
 }
 .container_dropdowm {
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -119,7 +123,6 @@ export default {
   color: var(--main-color);
   .content_dropdown {
     height: 100%;
-    background-color: blue;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -129,28 +132,42 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 0;
       .close_nav {
         width: 50px;
         color: white;
         cursor: pointer;
         font-size: 20px;
-        // margin: 50px;
         border: 2px solid var(--main-color) !important;
-        padding: 5px;
+        padding: 4px;
         border-radius: 5px;
         text-align: center;
         color: var(--main-color);
       }
     }
-
+    .nav_phone {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      .login_cart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & > :nth-child(1)
+        {
+          display: flex;
+          flex-direction: row;
+          gap: 15px;
+        }
+      }
+    }
     ul {
       display: flex;
       flex-direction: column;
       gap: 20px;
       justify-content: space-between;
-      margin: 50px 0;
       height: 50%;
-      // height: 600px;
       a {
         font-family: Medium;
         color: black;

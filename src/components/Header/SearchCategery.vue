@@ -58,6 +58,7 @@ export default {
       transition: all 0.4s linear;
       border: none;
       font-weight: 500;
+      background-color: transparent;
     }
   }
   .categery {

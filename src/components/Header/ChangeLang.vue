@@ -49,5 +49,6 @@ export default {
 <style scoped>
 button {
   background-color: transparent;
+  border: none;
 }
 </style>

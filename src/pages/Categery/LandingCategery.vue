@@ -44,7 +44,7 @@ export default {
   margin-bottom: var(--margin);
   @media (max-width: 1024px) {
     & {
-      height: 15vh;
+      height: 17vh;
     }
   }
 }
@@ -66,8 +66,21 @@ export default {
 
   h3 {
     font-weight: 400;
+    @media (max-width: 768px) {
+      & {
+        font-size: 18px;
+      }
+    }
   }
   ul {
+    @media (max-width: 768px) {
+      & {
+        li,
+        a {
+          font-size: 14px !important;
+        }
+      }
+    }
     li {
       list-style: none;
     }
@@ -75,6 +88,8 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
     & > :nth-child(1) {
       a {
         color: rgb(237 26 44 / 70%);

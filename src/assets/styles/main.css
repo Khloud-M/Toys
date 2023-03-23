@@ -17,6 +17,9 @@
 .is-rtl {
   direction: rtl;
 }
+button{
+  border: none;
+}
 @font-face {
   font-family: "Cairo-Bold";
   src: local("Cairo"), url(../fonts/Cairo-Bold.ttf) format("truetype");
