@@ -19,7 +19,7 @@
             </div>
             <div class="login_cart">
               <div>
-                <router-link to="/:auth">
+                <router-link to="/:auth" @click="toggle">
                   <v-icon icon="mdi-account"> </v-icon>
                   {{ $t("buttons.signIn") }}</router-link
                 >
@@ -27,7 +27,7 @@
                   <v-icon
                     size="27"
                     icon="mdi-shopping-outline"
-                    data-bs-dismiss="offcanvas"
+                    @click="toggle"
                   ></v-icon>
                 </router-link>
               </div>
@@ -154,8 +154,7 @@ export default {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        & > :nth-child(1)
-        {
+        & > :nth-child(1) {
           display: flex;
           flex-direction: row;
           gap: 15px;
